@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles -->
+    
+    <style>
+       
+        .card{
+            border-color: blue;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-8 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mt-3">Login</h2>
+                        <form id="loginForm">
+                            <div class="form-group mt-5">
+                                <label for="username"><b>Username:</b></label>
+                                <input type="text" class="form-control mt-2" id="username" required>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="password"><b>Password:</b></label>
+                                <input type="password" class="form-control mt-2" id="password" required>
+                            </div>
+                            <button type="button" class="btn btn-primary mt-5 btn-block" onclick="validateLogin()">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function validateLogin() {
+            // Retrieve values from the form
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Simple validation (you should implement server-side validation for security)
+            if (username === "manshi818" && password === "818106") {
+                alert("Login successful!");
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
